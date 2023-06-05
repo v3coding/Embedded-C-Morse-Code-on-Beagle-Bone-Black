@@ -1,0 +1,7 @@
+A Linux driver that can be loaded on to the Beagle Bone Green,
+
+With an LED configured a specified GPIO
+
+This Driver will take a text string as input and flash the connected LED in morse code and print out the string
+
+Written entirely by me referencing Brian Frasers CMPT433 Course Material 

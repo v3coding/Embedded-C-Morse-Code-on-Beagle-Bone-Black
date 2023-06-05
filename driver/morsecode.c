@@ -63,10 +63,8 @@ static void morseCode(unsigned short code, int is_last) {
     int hasBegun = 0;
     for (i = 15; i >= 0; i--) {
         int bit = (code >> i) & 1;
-
         if (hasBegun || bit) {
             hasBegun = 1;
-
             if (bit) {
                 int next_bit = (code >> (i - 1)) & 1;
                 int next_next_bit = (code >> (i - 2)) & 1;
@@ -85,7 +83,6 @@ static void morseCode(unsigned short code, int is_last) {
             }
         }
     }
-
     if (!is_last) {
         msleep(LETTER_GAP_MS - GAP_TIME_MS);
     } else {
@@ -154,5 +151,5 @@ static void __exit my_exit(void){
 module_init(my_init);
 module_exit(my_exit);
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("Patrick Burns");
+MODULE_AUTHOR("v3coding");
 MODULE_DESCRIPTION("A simple text to Morse Code translator driver");
